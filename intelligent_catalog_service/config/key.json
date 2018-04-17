@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "dotzcloud-datalabs-uat",
+  "private_key_id": "732fbf62b45f500fa0463764a9111cd01d621b92",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqbdEHdKCXWcdM\nU28205eq+LwZp1NWtdU6RxoSSmOt7qtN8exk+Dbbmo5rtBdPZVEhk62ToOONoUiG\nWNWphcu7iAA3OsZkm6CwLHX/3DELUuyaLX0OBT848v3Do0G44y9TMzJwbJusE54n\nRMi6AZE+06pHv2d8Uakk774KFatmzn2erUTI5s0gRyDbGWc/8sD99FQmek8VAkL6\nVaA9L6LATBmV0kiGZYIZbmZ9zK2tWx2IrYsWi9ccyKWdyUghDZ/7OacE6HVkpLcP\n34lDOH94fMz6hLroc1UGAbkxSyiuyRvnPBQQkt7Y8yS4YFisY09F4bHDOAYD9+sQ\nUijaqC/rAgMBAAECggEANukuBYxup4UeIPnq5cvT3JrKpCtUvyXT3zSEcms0ZZh1\n6iWtyDRvHF9WTt5V+ldHBh36OYwHdR0HbH3XzYhVxYTCqQjPXiAEbG7O0BKmXKMp\np11LowZOwe8MkwmZRdQw7cobkLx1hcJGXRmc4M1belYhUX+afKQk7sktvjsQIA2W\nGnSNL5ftvnMjW6Do/iiB8p2fXILAD5JT+7CSXp8oCtq95rtLpVY5DTUmKr/NjkAC\nGYxlx9BE+CBB+X9EmikzdqpgExzo1idt6lt6zcBg8Xr2t2VGDKtRJ1zuZRGLkEAT\n0jsdimi9u2ewCXa39xk609UEhC1koWjwmidG9eGjaQKBgQDY+i1U2aSj+7UosPFo\nGUMeMvWJ+219sfTyMQamIJXI7zrH+i+PTNTGA9OZa+G84QXtmlQjJg6hpMkfDcSr\nn/UGryoZa6drc5wqHz+EWYfHZMGdi09YedEp7ybm3zzwx9z0vmAX4oSGdf4UIBXT\nwCPB9LWUg0Il+wC/9i3DrY3k4wKBgQDJFIQD43we2FyHsGGvsOEQNvsnIb5jYkJe\nXvCReyRbbpnOLJj0B5xhhsvLehkOS3MyCKn6DYZlMHPv5abIugglM4YuebnwHGvW\naBs5rcpdVQmCOTQFb/HIB5V1TPuCfwUUIKiI0lqy/36gz8jf0TEPFVfgfsG6GiA5\nt1pWss1/WQKBgBObN7FtIUV4HzyYEJhZgAkgjbN0Nsae6AVijLlCRIatp2AeqWGH\njcp+2gYJC5LnuoNn6KZsb/IHU+0sb1Ma1ydNeL5nTe+VuMzNmg25kV1hK2WzCu5x\nw4bIh3lhPr57MOokscY2v8burpDe/VnvCMwj8qyC191auwydkDEYY7QFAoGBAKZ8\nfAmUMlJ/pa0bFuaWtuHsA+qUf8RduMHWLazmnmWtn18bgdCa9JmzN81TXKd/RPOq\nRMIqrJnfkj6QkJUlolTa4kBcvNzXS1oMfG43PJQmMmdF4ZKW60NJNDAY+y1C6fuO\nRrxyHnKSJFAVeiYGWG46p7XSfagOtZvT+dJK3OaRAoGBAMaHR3B/5FQn2hTPac+B\nidDl7g5yZQAYdCZSN/RWkm6dm3ETNFo7io57omlvrIjDeiltcEIQaZr1bsVhYqEp\nLeBQmUdIEVCn1PJ+fGCxR9OVc/tja8/Dl8PbkeZuHFHTcnhgUunDdtYD1CiUiUMo\nlFdEc03KXRxRh6hUqM0+qRf8\n-----END PRIVATE KEY-----\n",
+  "client_email": "intelligent-catalog@dotzcloud-datalabs-uat.iam.gserviceaccount.com",
+  "client_id": "115282934215045199596",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/intelligent-catalog%40dotzcloud-datalabs-uat.iam.gserviceaccount.com"
+}

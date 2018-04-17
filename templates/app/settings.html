@@ -1,0 +1,27 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<v-container fluid fill-height>
+      <v-layout
+         justify-center
+         align-center
+         >
+         <template>
+            <v-layout row>
+               <v-flex >
+{#                   <v-btn @click="testebq"></v-btn>#}
+               </v-flex>
+            </v-layout>
+         </template>
+      </v-layout>
+</v-container>
+{% endblock %}
+{% block tail %}
+    {{ block.super }}
+    <script>
+        $(document).ready(function () {
+            getCatalogStatus();
+        });
+    </script>
+{% endblock %}

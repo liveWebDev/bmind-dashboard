@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "dotzcloud-datalabs-sandbox",
+  "private_key_id": "c679c0ea5233eb13aaec39022c0284d2f1e652f4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQD2dcuMKWqCprNO\ngGkHKpQkNuPxFMdIBC26bCkUXoriw6f3LfRF0kJXegWfQfH+bxp7L3y5zNJNlwTq\neNgGLfhMYL9FPbidFQ+NHj8ILbRbjZlJupDbqDqTkI7km6gb5fmxBLyBf8/9hkYe\ncMpaNYwQWhWB1HXoLC5dVmaAsajYbcYnFqVzOoDqmvRU3uiBVwvsB7G1R1QQVeU+\n2TppLXdCfvHg7lZPTr2VgkS9wq9+dADkrh1B4b90taihv5fu7jIVYIylzO+zJSQ2\nJs9I5wFIHrsukkZdRIhpG+uNsOSG2YZrDDeNRsV7xApSKCQ/piKFRzvV+QWvjFOU\nCNPViyW1AgMBAAECggEAQqqfaiUD1h6AjyIGBvW6B8e/RcWgmDblJbG/NO7T874I\nD8Ei+8YBwwbTQX6FlpT4HU09mEaytmE8563ThWxm50YeRv0IlJkPUVVWqIAwcrlt\nNvfb2kb5vVPTizwdr5o4Pe1xjjgEC2iITBCnc9pbLksn2SwezrQwwHewF2y3Jv+W\nvxyDidTPRW8BtYHozCnOxerOJnpxYVuGcvWiaabH64LzONOFcMkSFmgQoW5CFyeQ\nHd9HEFpf+jx8FupYesNWYemXAFhSARovxUs+4NWfyW2rfEakp1GU1AsywJ2uJIag\nyQzK3tb/pc4dvzaYDNwKn0pbZcOZAExTe+YdSDmaqwKBgQD8WqwIrOptVqx+dKTw\nmIjAzmecV36NpMGNoQU5YlVVk6yHu421MDj4YBKHlnau00hlmvkNHE9doLfUXO+M\ndH81Gu1GRcJV5fySahzkEuCgMeHTW9OSnfBy1yoRtT/ce9ueHgwQ9Z35uQj9DZad\nOUIoReFpkD3pz0DfwAJKTD2SuwKBgQD6BVL0xawgzVn6SKOkXjrh2mqhNRTYIKlo\nMd/axNFk1fc4kQ1UrKYABPauR41XAv121Tx38hV4qE77Y/ZmtsNG++jCdYKinl/m\nxGgSEfdSqrvTzUFr8NttzURvELufMTZ7bcBUopfMm7je2ahyzvcbuVRLcZhTBR8S\nWWvfjF26TwKBgDFDmjYPW6yAsSf2qYR2oqvRH5T7167bLRXzC0wKkFImhBXzXVSz\n10tVpghmLUEv6gA74sbWcf/7Mif5BKLM01CQsyV21NtkDIygvocf0E41rrpOQN1s\ni9Y/fuz6Dz+Bxnv1rbFZ4b8wijqsfmyvEuU9zyWGjS+p0CZeG5RZkeOlAoGAYU3l\nJUIxZWrGU/QlS/kobXH2AduIyzya8eRHPPtQizAC0U8Soxu2V1eXMejDB1QwlSkU\nKZJb7OOEKa6T3RHQGjY8NkJJn0SICmXyIuY/HTs5cor1pS7OF4PF2HvoqWIb1Bm4\nure04HrSjlijiFsoLPAJ8Hq7T8Q0fY2zwAL/D10CgYBeiKP9E3dD5IHSyDIcrdYl\n1+Ggs7aZEHekCNRNIfDFVZkNHmGHLaPnBgEFInf6Pe9uROKK17l2YWCgtR1e8Xjw\nrf8y92OxTYXPK/WpjJE/DdW3Nk/gNFfiH7p9y3EngP3p31ba4mFqECbcywwcnmfR\nCcH5R9jZhDcthjFhNCFJiQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "bmind-bigquery@dotzcloud-datalabs-sandbox.iam.gserviceaccount.com",
+  "client_id": "100843095233520234250",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bmind-bigquery%40dotzcloud-datalabs-sandbox.iam.gserviceaccount.com"
+}

@@ -1,0 +1,118 @@
+{% extends "app/layout.html" %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <v-tabs fixed>
+            <v-tabs-bar>
+                <v-tabs-slider color="primary"></v-tabs-slider>
+                <v-tabs-item href="tab-1">
+                    DASHBOARD
+                </v-tabs-item>
+                <v-tabs-item href="tab-2">
+                    ACTIVITY
+                </v-tabs-item>
+            </v-tabs-bar>
+            <v-tabs-items>
+                <v-tabs-content id="tab-1">
+                    <v-card flat class="grey lighten-4">
+                        <v-card-text>
+                            <v-container fluid fill-height>
+                                <v-layout column>
+                                    <v-flex xs12 sm8 offset-sm2>
+                                        <v-container fluid grid-list-md class="grey lighten-4">
+                                            <v-layout row wrap>
+                                                <v-flex xs6>
+                                                    <v-card>
+                                                        <v-card-media>
+                                                            <v-container fill-height fluid>
+                                                                <v-layout fill-height>
+                                                                    <v-flex xs12 align-end flexbox>
+                                                                        <span class="headline grey--text">Catalog Info</span>
+                                                                    </v-flex>
+                                                                </v-layout>
+                                                            </v-container>
+                                                        </v-card-media>
+                                                        <v-card-title>
+                                                            <div>
+                                                                <span class="grey--text">Name:</span><br><span
+                                                                    v-text="catalogInfo.catalogName"></span><br>
+                                                                <span class="grey--text">Version:</span><br><span
+                                                                    v-text="catalogInfo.catalogVersion"></span><br>
+                                                                <span class="grey--text">Status:</span><br><span
+                                                                    v-text="catalogInfo.catalogStatus"></span><br>
+                                                                <span class="grey--text">Date:</span><br><span
+                                                                    v-text="catalogInfo.catalogDate"></span><br>
+                                                            </div>
+                                                        </v-card-title>
+                                                        <v-divider></v-divider>
+                                                        <v-card-actions class="white">
+                                                            <v-btn flat color="blue" :disabled="!canProcess"
+                                                                   @click="processCatalog">Process
+                                                            </v-btn>
+                                                            <!--<v-btn flat color="green" :disabled="!canPublish"-->
+                                                            <v-btn flat color="green"
+                                                                   @click="publishCatalog">Publish
+                                                            </v-btn>
+                                                        </v-card-actions>
+                                                    </v-card>
+                                                </v-flex>
+                                                <v-flex xs6>
+                                                    <v-card>
+                                                        <v-card-media>
+                                                            <v-container fill-height fluid>
+                                                                <v-layout fill-height>
+                                                                    <v-flex xs12 align-end flexbox>
+                                                                        <span class="headline grey--text">Statistics</span>
+                                                                    </v-flex>
+                                                                </v-layout>
+                                                            </v-container>
+                                                        </v-card-media>
+                                                        <v-card-title>
+                                                            <div>
+                                                                <span class="grey--text"># Clusters:</span><br><span
+                                                                    v-text="statisticsInfo.clusterNumber"></span><br>
+                                                                <span class="grey--text"># Items:</span><br><span
+                                                                    v-text="statisticsInfo.clusterItems"></span><br>
+                                                                <span class="grey--text"># Items Interacted:</span><br><span
+                                                                    v-text="statisticsInfo.clustersInteracted"></span><br>
+                                                            </div>
+                                                        </v-card-title>
+                                                        <v-divider></v-divider>
+                                                        <v-card-actions class="white">
+                                                            <v-btn flat color="grey" href="{% url 'app:report' %}">GO TO
+                                                                STATISTICS<span>&nbsp;</span>
+                                                                <v-icon>forward</v-icon>
+                                                            </v-btn>
+                                                        </v-card-actions>
+                                                    </v-card>
+                                                </v-flex>
+                                            </v-layout>
+                                        </v-container>
+                                    </v-flex>
+                                </v-layout>
+                            </v-container>
+                        </v-card-text>
+                    </v-card>
+                </v-tabs-content>
+            </v-tabs-items>
+            <v-tabs-content id="tab-2">
+                <v-card flat class="grey lighten-4">
+                    <v-card-text>
+                        NO ACTIVITIES TO SHOW
+                    </v-card-text>
+                </v-card>
+            </v-tabs-content>
+        </v-tabs>
+    {% else %}
+        <div style="text-align: center; margin-top: 100px;">
+            <v-btn color="primary" style="text-align: center" href="{% url 'app:user_login' %}">Log In</v-btn>
+        </div>
+    {% endif %}
+{% endblock %}
+{% block tail %}
+    {{ block.super }}
+    <script>
+        $(document).ready(function () {
+            getCatalogStatus();
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,128 @@
+{% extends "app/layout.html" %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <a name="top-page"/>
+        <v-container
+                fluid
+                style="min-height: 0;"
+                grid-list-xs>
+
+            <v-card flat class="py-0" color="grey lighten-3">
+                <v-toolbar dense card height="40px">
+                    <v-toolbar-title class="body-2 font-weight 500">Catalog Version 1.0</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-toolbar-items class="hidden-sm-and-down">
+                        <div style="margin-top: 10px;">Qty/Page</div>
+                        <div style="margin-top: 5px; margin-left: 5px;">
+                            <v-flex>
+                                <v-select
+                                        :items="itemsquantitypage"
+                                        item-text="item"
+                                        item-value="value"
+                                        v-model="modelquantitypage"
+                                        single-line
+                                        persistent-hint
+                                        id="comboquantityperpage"
+                                >
+                                </v-select>
+                            </v-flex>
+                        </div>
+                        <v-btn flat value="center" @click.stop="rightDrawer = !rightDrawer">
+                            <v-icon>filter_list</v-icon>
+                            <span>[[filterButtonLabel]]</span>
+                        </v-btn>
+                        <v-spacer></v-spacer>
+                    </v-toolbar-items>
+                </v-toolbar>
+            </v-card>
+        </v-container>
+        <v-container fluid fill-height>
+            <v-layout
+                    justify-center
+                    align-center>
+                <v-layout row>
+                    <v-flex>
+                        <template v-for="cluster in items">
+                            <v-container
+                                    fluid
+                                    style="min-height: 0;"
+                                    grid-list-sm>
+                                <v-card>
+                                    <v-toolbar dense flat card height="40px">
+                                        <v-toolbar-title class="body-2 font-weight 500">[[cluster.cluster_id + ' - # Items: ' + cluster.cluster_items.length]]
+                                        </v-toolbar-title>
+                                    </v-toolbar>
+                                    <v-data-table
+                                            :headers="headers"
+                                            :items="cluster.cluster_items"
+                                            hide-actions
+                                            class="elevation-1"
+                                            :loading="loading"
+											dense
+												  
+                                    >
+                                        <template slot="items" slot-scope="props">
+											<template v-for="head in headers">
+												<td v-if="head.type == 'user'" :class="classChanger(props.item.ROW_MAIN, props.item.WRONG, 1)" v-html="props.item[head.value]"></td>
+												<td v-if="head.type == 'img'" :class="classChanger(props.item.ROW_MAIN, props.item.WRONG, 1)"><img v-bind:src="props.item[head.value]" alt="" height="65px" width="65px"/></td>
+											</template>
+                                            <!--<a v-bind:href="props.item[head.value]"> "props.item[head.value]"<img v-bind:src="props.item[head.value]" width="65" height="65" /></a>-->
+                                            <td :class="classChanger(props.item.ROW_MAIN, props.item.WRONG, 2)"v-html="props.item.count" ></td>
+                                            <td :class="classChanger(props.item.ROW_MAIN, props.item.WRONG, 2)">
+                                                {% comment %}rowMainArray.indexOf(props.item.index) > -1{% endcomment %}
+                                                <v-icon color="amber lighten-1" :ref="props.item.index" v-if="props.item.ROW_MAIN == 1" @click="starClick(cluster.cluster_id, props.item.ROW_INDEX)">star</v-icon>
+                                                <v-icon color="amber lighten-1" :ref="props.item.index" v-else @click="starClick(cluster.cluster_id, props.item.ROW_INDEX)">star_border</v-icon>
+                                                <v-icon color="red lighten-1" v-if="props.item.WRONG == '1'" @click="wrongClick(cluster.cluster_id, props.item.ROW_INDEX)">cancel</v-icon>
+                                                <v-icon color="red lighten-1" v-else @click="wrongClick(cluster.cluster_id, props.item.ROW_INDEX)">close</v-icon>
+                                                <v-icon color="primary" v-if="props.item.COMMENT != ''" @click="commentClick(cluster.cluster_id, props.item.ROW_INDEX)">chat_bubble</v-icon>
+                                                <v-icon color="primary" v-else @click="commentClick(cluster.cluster_id, props.item.ROW_INDEX)">chat_bubble_outline</v-icon>
+                                            </td>
+                                        </template>
+                                    </v-data-table>
+                                </v-card>
+                            </v-container>
+                            <v-divider></v-divider>
+                        </template>
+                        <v-dialog v-model="dialogComment" max-width="550px">
+                            <v-card>
+                                <v-card-text>
+                                    <template>
+                                        <v-text-field
+                                                label="Comment"
+                                                multi-line
+                                                v-model="inputCommentModel"
+                                        ></v-text-field>
+                                    </template>
+                                </v-card-text>
+                                <v-card-actions>
+                                    <v-spacer></v-spacer>
+                                    <v-btn color="primary" flat @click.stop="dialogComment=false">Cancel</v-btn>
+                                    <v-btn color="green" flat @click.stop="updateComment();">Save</v-btn>
+                                </v-card-actions>
+                            </v-card>
+                        </v-dialog>
+
+                        <v-progress-linear v-show="loading" indeterminate></v-progress-linear>
+
+                        <div class="text-xs-center">
+                            <v-pagination :length="pages" v-model="page" :total-visible="10"
+                                          @click.native="scrollToAnchor"></v-pagination>
+                        </div>
+                    </v-flex>
+                </v-layout>
+            </v-layout>
+        </v-container>
+    {% else %}
+        <div style="text-align: center; margin-top: 100px;">
+            <v-btn color="primary" style="text-align: center" href="{% url 'app:user_login' %}">Log In</v-btn>
+        </div>
+    {% endif %}
+{% endblock %}
+{% block tail %}
+    {{ block.super }}
+    <script>
+        $(document).ready(function () {
+            getCatalogStatus();
+        });
+    </script>
+{% endblock %}

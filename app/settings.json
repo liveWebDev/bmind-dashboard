@@ -1,0 +1,14 @@
+{
+    "ui_features": [
+      { "text": "IMAGE", "value": "Imagens_sku_", "align": "left", "sortable": "false", "type": "img" },
+      { "text": "SKU", "value": "IdSKU", "align": "left", "sortable": "false", "type": "user" },
+      { "text": "NAME", "value": "Product_Name", "align": "left", "sortable": "false", "type": "user" },
+      { "text": "# PARTNER", "value": "Partner_Qtde", "align": "left", "sortable": "false", "type": "user" },
+      { "text": "ATTRIBUTE", "value": "Main_Attribute", "align": "left", "sortable": "false", "type": "user" },
+      { "text": "GTIN", "value": "GTIN", "align": "left", "sortable": "false", "type": "user" },
+      { "text": "BRAND", "value": "Brand_Name", "align": "left", "sortable": "false", "type": "user" },
+      { "text": "CATEGORY_1", "value": "Category_Name_1", "align": "left", "sortable": "false", "type": "user" },
+      { "text": "# COUNT", "value": "count", "align": "right", "sortable": "false", "type": "sys"},
+      { "text": "ACTIONS", "value": "ACTIONS", "align": "right", "sortable": "false", "type": "sys"}
+  ]
+}

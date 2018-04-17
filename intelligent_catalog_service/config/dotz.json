@@ -1,0 +1,13 @@
+{
+  "ui_features": [
+ 
+        { "text": "PARTNER_ID", "value": "Partner_ID", "align": "left", "sortable": "false" , "type": "user"},
+				{ "text": "NAME", "value": "Product_Name", "align": "left", "sortable": "false", "type": "user"},
+				{ "text": "GTIN", "value": "GTIN", "align": "left", "sortable": "false", "type": "user"},
+				{ "text": "BRAND", "value": "Brand_Name", "align": "left", "sortable": "false", "type": "user"},
+				{ "text": "CATEGORY_1", "value": "Category_Name_1", "align": "left", "sortable": "false", "type": "user"},
+        { "text": "CATEGORY_2", "value": "Category_Name_2", "align": "left", "sortable": "false", "type": "user"},    
+        { "text": "# COUNT", "value": "count", "align": "right", "sortable": "false", "type": "sys"},
+        { "text": "ACTIONS", "value": "ACTIONS", "align": "right", "sortable": "false", "type": "sys"}
+  ]
+}

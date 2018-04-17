@@ -1,0 +1,178 @@
+{% extends "app/layout.html" %}
+{% block content %}
+    <template>
+        <v-card
+                flat
+                class="pa-3"
+        >
+            <h2>Catalog Processing Results</h2>
+        </v-card>
+        <v-card
+                flat
+                class="pa-3 grey lighten-2"
+        >
+            <h4>Characteristics</h4>
+        </v-card>
+
+        <v-container
+                fluid
+                style="min-height: 0;"
+                grid-list-lg>
+            <v-layout row wrap>
+                 <v-flex md2>
+                    <v-card>
+                        <v-data-table
+                                :items="head_statistics_items"
+                                hide-actions
+                                hide-headers
+                        >
+                            <template slot="items" slot-scope="props">
+                                <td class="text-xs-right">[[props.item.text]]</td>
+                            </template>
+                        </v-data-table>
+                    </v-card>
+                </v-flex>
+                <v-flex md5>
+                    <v-card>
+                        <v-data-table
+                                :items="head_more_restrictive_items"
+                                hide-actions
+                                hide-headers
+                        >
+                            <template slot="items" slot-scope="props">
+                                <td class="text-xs-left"><span :class="props.item.color">[[ props.item.signal ]]</span> [[ props.item.text ]] <span :class="props.item.percentColor">[[ props.item.percent ]]</span></td>
+                            </template>
+                        </v-data-table>
+                    </v-card>
+                </v-flex>
+                <v-flex md5>
+                    <v-card>
+                        <v-data-table
+                                :items="head_less_restrictive_items"
+                                hide-actions
+                                hide-headers
+                        >
+                            <template slot="items" slot-scope="props">
+                                <td class="text-xs-left"><span :class="props.item.color">([[ props.item.signal ]])</span> [[ props.item.text ]] <span :class="props.item.percentColor">[[ props.item.percent ]]</span></td>
+                            </template>
+                        </v-data-table>
+                    </v-card>
+                </v-flex>
+            </v-layout>
+        </v-container>
+        <v-card
+                flat
+                class="pa-3 grey lighten-2"
+        >
+
+        <!--<h4>Interactions</h4>
+    </v-card>
+
+    <v-container
+            fluid
+            style="min-height: 0;"
+            grid-list-lg>
+        <v-layout row wrap>
+             <v-flex md2>
+                <v-card>
+                    <v-data-table
+                            :items="head_interacted_items"
+                            hide-actions
+                            hide-headers
+                    >
+                        <template slot="items" slot-scope="props">
+                            <td class="text-xs-right">[[props.item.text]]</td>
+                        </template>
+                    </v-data-table>
+                </v-card>
+            </v-flex>
+            <v-flex md5>
+                <v-card>
+                    <v-data-table
+                            :items="head_more_restrictive_items"
+                            hide-actions
+                            hide-headers
+                    >
+                        <template slot="items" slot-scope="props">
+                            <td class="text-xs-left"><span :class="props.item.color">[[ props.item.signal ]]</span> [[ props.item.text ]] <span :class="props.item.percentColor">[[ props.item.percent ]]</span></td>
+                        </template>
+                    </v-data-table>
+                </v-card>
+            </v-flex>
+        </v-layout>
+    </v-container>
+    <v-card
+            flat
+            class="pa-3 grey lighten-2"
+    >-->
+            <h4>Results</h4>
+        </v-card>
+        <v-container
+                fluid
+                style="min-height: 0;"
+                grid-list-lg>
+            <v-layout row wrap>
+                <v-flex md2>
+                    <v-card>
+                    </v-card>
+                </v-flex>
+                <v-flex md5>
+                    <v-card>
+                        {% comment %}<v-toolbar dense card height="40px">
+                            <v-toolbar-title class="body-2 font-weight 500">Cluster Level 1 | More restrictive -
+                                Considering attributes
+                            </v-toolbar-title>
+                            <v-spacer></v-spacer>
+                            <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
+                        </v-toolbar>{% endcomment %}
+                        <v-data-table
+                                :headers="headers_rep_n1"
+                                :items="rp_n1_items"
+                                hide-actions
+                                class="elevation-1"
+                        >
+                            <template slot="items" slot-scope="props">
+                                <td class="text-xs-center" v-html="props.item.GROUP "></td>
+                                <td class="text-xs-center" v-html="props.item.QT_NAME "></td>
+                                <td class="text-xs-center" v-html="props.item.QT_CLUSTER "></td>
+                                <td class="text-xs-center" v-html="props.item.PC_CLUSTER "></td>
+                            </template>
+                        </v-data-table>
+                    </v-card>
+                </v-flex>
+                <v-flex md5>
+                    <v-card>
+                        {% comment %}<v-toolbar dense card height="40px">
+                            <v-toolbar-title class="body-2 font-weight 500">Cluster Level 2 | Less restrictive -
+                                Disregarding attributes
+                            </v-toolbar-title>
+                            <v-spacer></v-spacer>
+                            <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
+                        </v-toolbar>{% endcomment %}
+                        <v-data-table
+                                :headers="headers_rep_n1"
+                                :items="rp_n2_items"
+                                hide-actions
+                                class="elevation-1"
+                        >
+                            <template slot="items" slot-scope="props">
+                                <td class="text-xs-center" v-html="props.item.GROUP "></td>
+                                <td class="text-xs-center" v-html="props.item.QT_NAME "></td>
+                                <td class="text-xs-center" v-html="props.item.QT_CLUSTER "></td>
+                                <td class="text-xs-center" v-html="props.item.PC_CLUSTER "></td>
+                            </template>
+                        </v-data-table>
+                    </v-card>
+                </v-flex>
+            </v-layout>
+        </v-container>
+    </template>
+{% endblock %}
+{% block tail %}
+    {{ block.super }}
+    <script>
+        $(document).ready(function () {
+            getCatalogStatus();
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "product-catalog-via-varejo",
+    "private_key_id": "486007c267cac0fb3709f4f4bd900c6bb768c543",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCf96BrNDPUCxXg\ngFL9MsVSd6Kwo+8sbM1ZUcu5oznwjvoOYScejPLZKAqXw8VKg4TbsLpN72gKDFkB\nMm1THYftkaezDx2pWALBQjquFERsRRntYt91S28/JwW1hegUMn8p284vxV8RvKVI\nX/B+muRsvN9TLpF9ZSAdxqvc6FySdIAzc8rqYbxoiDtf+FDXi6nDiPG7ez6hiuPo\npMQKZRJWuE3IPkbThct/2aZyYwDXiJQQMk55QiHNmbkzhzeEal0aMkCj2Sm8kmnO\nvXLFv+r6oMPv/uLYLztJf6X8u+0HVYmxh6TkAOKcUtdZkN4/QRazqc3w0rqUhKcl\nHMqPYbrjAgMBAAECggEABQAiqEyWH4Ib3va5TBJIOiRkljeprwPVBNPFFeUqVytr\nrwNjy6qwShAxtJN5brOJywGim/O97C0n+HJGb0YJt71z4T8PDaTOAT3mw7D9KpKb\nwDX1B5+iDKFVplpXP4+3NexvF5iIjkS4Dfkhysi2F0gYMGt7lNCSc8aAHNm5UG1T\nMUE5YcfrVHfQWalTPgGOjhVuAQH5CFm0CGeqjkP+svBQMocMIgZrGveFy9eM6Te9\nUEhH4G+bNMxNBjFMggkBYjVWypj/NvlIXFvr2//kZSb1OEeRRfRAG080btFq8V4j\nX2yzlGHOjDyt+X47o/Q8la0WOCbbPOupVClEN4ZZIQKBgQDau0MMTimGqKfxKlG/\nB9fc1p7kosA8Xg85HJxpPp6T1JsqlaBU2LWR8LvGG3EoaypThLznBT/qSl3zwqPa\n1FCW6z6F/+i6Pk9ga3CPuedN6d8EqVU71fHIMdUUOR/sWBwuUhq39fXb7cN1D5/X\n9pHruckgx6CMiZXLBBcPaOrnuQKBgQC7OSiq6F2PFrRzrab03Nkihp27UYxaMdBC\nJp/ExSAYLMPbna0w6JVvnkiEXZuHhTIIj2y4a6jKag2kToaOAU0/KLJ1a7vkisdo\n/CHKUHAueI3NCJWhp1RElEuMmKRc+RCcZ/8rRiymH96qPmtX0T0N6cHdvYNleB5Q\nMlvn3sANewKBgQC5cI21fwbBvXc0hRZtCK8/8U0gtcKY632og9MvfwFef59ViSk3\nBctaAWiQ2m8jP0fRKvYkPlUjwwzIPrpAKkRwztxhKscaLv2I103E7G1npuGGyDEU\n25tyiJ0H2i5wZ3rs4nr4f7SDUp6lPivcIpUv7oDQI66/t12hksQiMmcFMQKBgFSR\njhgdG929cMdr4iVq+L3KtsbdIBvBsoOe9L4qGMQyvEmgYJHeDVo80h7QNaeyd5Y8\nSuzG3JiJ7R2Rxt+wINdtp6a4gkfKlCaM9SpwySuEkvDRdt1tOvg7UCDy9hN1AZbU\ntwMyEIr9jFO0HEKvpfd55nMl3otgBblN9gu3p2KvAoGAZJ3v1A0ducqle9JJ6wTg\nDycaq+rdmHmDJgK+ulcbayXKbX1STIjkM8jsxAKDKe/z66bGlt7MTEB1D7I2gkxw\nkVOXGpHNr3spFygWlxafYB4NPxMHv8bBAVcM/7h5styVmYm8yPDy+Peq/0rV2XEv\naUlHvHoVOqkL5f90oInzYDY=\n-----END PRIVATE KEY-----\n",
+    "client_email": "intelligent-catalog@product-catalog-via-varejo.iam.gserviceaccount.com",
+    "client_id": "101641121913541599070",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://accounts.google.com/o/oauth2/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/intelligent-catalog%40product-catalog-via-varejo.iam.gserviceaccount.com"
+  }

@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+*.pyproj
+*.sln
+/bmind/nlp/word2vec/__pycache__
+/bmind/nlp/__pycache__
+/test/.ipynb_checkpoints
+*.pyproj.user
+/data/*
+/data
+catalog.json
+catalog.zip
