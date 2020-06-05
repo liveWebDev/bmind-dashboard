@@ -15,7 +15,7 @@ cryptography==2.1.4
 cycler==0.10.0
 Cython==0.27.3
 decorator==4.2.1
-Django==2.0.2
+Django==2.2.13
 django-debug-toolbar==1.9.1
 djangorestframework==3.7.7
 docutils==0.14
