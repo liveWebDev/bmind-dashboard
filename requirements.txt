@@ -48,7 +48,7 @@ keyrings.alt==2.3
 launchpadlib==1.10.5
 lazr.restfulclient==0.13.5
 lazr.uri==1.0.3
-Mako==1.0.7
+Mako==1.2.2
 MarkupSafe==1.0
 matplotlib==2.1.2
 mistune==0.8.3
